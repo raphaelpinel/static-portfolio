@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -133,8 +134,12 @@
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="#" data-netlify="true" netlify-honeypot="bot-field">
 										<div class="fields">
+											<div class="hidden">
+												<label for="bot-field">Don't fill this out if you're human</label>
+												<input type="text" name="bot-field" />
+											</div>
 											<div class="field half">
 												<label for="name">Name</label>
 												<input type="text" name="name" id="name" />
@@ -146,6 +151,13 @@
 											<div class="field">
 												<label for="message">Message</label>
 												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+											<div class="field half">
+												<label for="file">Upload file</label>
+												<input type="file" name="file" id="file" placeholder="upload file" />
+											</div>
+											<div class="field half">
+												<div data-netlify-recaptcha="true"></div>
 											</div>
 										</div>
 										<ul class="actions">
